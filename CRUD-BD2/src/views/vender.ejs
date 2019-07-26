@@ -11,11 +11,6 @@
 </head>
 
 
-<pre>
-    <%= editclient %>
-    <%= editcarro %>
-</pre>
-
 <body>
     <% include ./nav%>
     <div class="container">
@@ -24,34 +19,34 @@
                 <form action="" method="POST">
 
                     <div class="form-group">
-                        <input type="text" name="id_cliente" placeholder="IDentificacion" class="form-control" value ="<%= editclient.id_cliente%>">
+                        <input type="text" readonly="readonly" name="id_cliente" placeholder="IDentificacion" class="form-control" value ="<%= Rcarro.id_placa%>">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="nombre_cliente" placeholder="NOMBRES" class="form-control" value="<%= editclient.nombre_cliente%>">
+                        <input type="text" readonly="readonly" name="nombre_cliente" placeholder="NOMBRES" class="form-control" value="<%= Rcarro.marca%>">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="direccion" placeholder="" class="form-control" value ="<%= editclient.direccion%>">
+                        <input type="text" readonly="readonly" name="direccion" placeholder="" class="form-control" value ="<%= Rcarro.modelo%>">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="telefono" placeholder="" class="form-control" value="<%= editclient.telefono%>">
+                        <input type="text" readonly="readonly" name="telefono" placeholder="" class="form-control" value="<%= Rcarro.color%>">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="id_placa" placeholder="" class="form-control" value="<%= editcarro.id_placa%>"> 
+                        <input type="text" readonly="readonly" name="id_placa" placeholder="" class="form-control" value="<%= Rcarro.valor%>"> 
                     </div>
                     <div class="form-group">
-                        <input type="text" name="marca" placeholder="" class="form-control" value="<%= editcarro.marca%>">
+                        <input type="text" readonly="readonly" name="marca" placeholder="" class="form-control" value="<%= Rcarro.nom_pais%>">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="modelo" placeholder="" class="form-control" value="<%= editcarro.modelo%>">
+                        <input type="text" readonly="readonly" name="modelo" placeholder="" class="form-control" value="<%= Rcarro.id_cliente%>">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="color" placeholder="" class="form-control" value="<%= editcarro.color%>">
+                        <input type="text"  name="color" placeholder="IDENTIFICACION DEL COMPRADO" class="form-control" value="">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="valor" placeholder="" class="form-control" value="<%= editcarro.valor%>">
+                        <input type="text"  name="valor" placeholder="NOMBRES COMPRADOR" class="form-control" value="">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="nom_pais" placeholder="" class="form-control" value="<%= editclient.nom_pais%>">
+                        <input type="text"  name="nom_pais" placeholder="PRECIO DE COMPRA" class="form-control" value="">
                     </div>
 
                     <button type="submit" class="btn btn-primary">

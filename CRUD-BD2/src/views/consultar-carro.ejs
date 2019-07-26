@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CONSULTAR CARRO</title>
+</head>
+<body>
+    
+    <div class="col">
+        <table>
+            <table class="table table-borderer table-hover">
+                <thead>
+                    <th>Identificacion</th>
+                    <th>Nombres</th>
+                    <th>Direccion</th>
+                    <th>Telefono</th>
+                    <th>Placa</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Color</th>
+                    <th>Precio</th>
+                    <th>Pais</th>
+                </thead>
+                <tbody>
+
+                    <% for(var i = 0; i < Rmodelo.length; i++) { %>
+                    <tr>
+                        <td><%= Rmodelo[i].id_cliente %></td>
+                        <td><%= Rmodelo[i].nombre_cliente %></td>
+                        <td><%= Rmodelo[i].direccion %></td>
+                        <td><%= Rmodelo[i].telefono %></td>
+                        <td><%= Rcarro[i].id_placa %></td>
+                        <td><%= Rcarro[i].marca %></td>
+                        <td><%= Rcarro[i].modelo %></td>
+                        <td><%= Rcarro[i].color %></td>
+                        <td><%= Rcarro[i].valor %></td>
+                        <td><%= Rpais[i].nom_pais %></td>
+                    
+
+                        <td>
+                            <a href="/edit/<%= Rmodelo[i].id_cliente %>/<%= Rcarro[i].id_placa %>" class="btn btn-danger">EDIT</a>
+                            <a href="/delete/<%=Rmodelo[i].id_cliente%>" class="btn btn-danger">DELETE</a>
+                        </td>
+
+                        <% } %>
+                    </tr> 
+
+                </tbody>
+            </table>
+        </table>
+
+    </div>
+
+</body>
+</html>

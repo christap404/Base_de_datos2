@@ -6,9 +6,10 @@ const CarroSk = new Schema({
     marca: String,
     modelo: String,
     color: String,
-    precio: String,
-    Id: String,
-    nombre:String,
+    valor: String,
+    nom_pais: String,
+    id_cliente:String,
+    id_compra: String,
     id_venta: String
 
 })

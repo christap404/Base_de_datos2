@@ -27,6 +27,8 @@ app.use(express.urlencoded({ extended: true}))
 //RUTAS
 app.use('/', indexRouters)
 app.use('carros-antiguos', indexRouters)
+app.use('compras-ventas', indexRouters)
+app.use('consultar-carro', indexRouters)
 
 
 //Starting server

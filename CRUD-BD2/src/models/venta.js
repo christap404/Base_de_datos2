@@ -3,8 +3,8 @@ const Schema = mongoose.Schema;
 
 const VentaSK = new Schema({
  id_venta: String,
- fecha: Date,
- valor: String,
+ fec_venta: Date,
+ val_venta: String,
  id_cliente: String
 });
 

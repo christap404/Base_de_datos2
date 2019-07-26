@@ -17,20 +17,20 @@
         
         <div class="row">
 
-            <div class="col-12 " style="justify-content: center">
+            <div class="col-12" style="justify-content: center">
                 <div class="card"  >
                     <form action="/add" method="POST">
                         <div class="form-group">
-                            <input type="text" name="Id" placeholder="Identificacion" class="form-control">
+                            <input type="text" name="id_cliente" placeholder="Identificacion" class="form-control">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="Nombre" placeholder="Nombres" class="form-control">
+                            <input type="text" name="nombre_cliente" placeholder="Nombres" class="form-control">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="Direccion" placeholder="Direccion" class="form-control">
+                            <input type="text" name="direccion" placeholder="Direccion" class="form-control">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="Telefono" placeholder="Telefono" class="form-control">
+                            <input type="text" name="telefono" placeholder="Telefono" class="form-control">
                         </div>
                         <div class="form-group">
                             <input type="text" name="id_placa" placeholder="Placa Carro" class="form-control">
@@ -45,8 +45,13 @@
                             <input type="text" name="color" placeholder="Color" class="form-control">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="precio" placeholder="Precio" class="form-control">
+                            <input type="text" name="valor" placeholder="Valor" class="form-control">
                         </div>
+
+                        <div class="form-group">
+                            <input type="text" name="nom_pais" placeholder="Pais" class="form-control">
+                        </div>
+                        
                         <div class="form-group">
                             <input type="text" name="nombre" placeholder="Pais" class="form-control">
                         </div>
@@ -77,22 +82,21 @@
 
                         <% for(var i = 0; i < Rmodelo.length; i++) { %>
                         <tr>
-                            <td><%= Rmodelo[i].Id %></td>
-                            <td><%= Rmodelo[i].Nombre %></td>
-                            <td><%= Rmodelo[i].Direccion %></td>
-                            <td><%= Rmodelo[i].Telefono %></td>
+                            <td><%= Rmodelo[i].id_cliente %></td>
+                            <td><%= Rmodelo[i].nombre_cliente %></td>
+                            <td><%= Rmodelo[i].direccion %></td>
+                            <td><%= Rmodelo[i].telefono %></td>
                             <td><%= Rcarro[i].id_placa %></td>
                             <td><%= Rcarro[i].marca %></td>
                             <td><%= Rcarro[i].modelo %></td>
                             <td><%= Rcarro[i].color %></td>
-                            <td><%= Rcarro[i].precio %></td>
-                            <td><%= Rpais[i].nombre %></td>
+                            <td><%= Rcarro[i].valor %></td>
+                            <td><%= Rpais[i].nom_pais %></td>
                         
 
-
                             <td>
-                                <a href="/edit/<%=Rmodelo[i].Id%>" class="btn btn-danger">EDIT</a>
-                                <a href="/delete/<%=Rmodelo[i].Id%>" class="btn btn-danger">DELETE</a>
+                                <a href="/edit/<%= Rmodelo[i].id_cliente %>/<%= Rcarro[i].id_placa %>" class="btn btn-danger">EDIT</a>
+                                <a href="/delete/<%=Rmodelo[i].id_cliente%>" class="btn btn-danger">DELETE</a>
                             </td>
 
                             <% } %>

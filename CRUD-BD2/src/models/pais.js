@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const PaisSK = new Schema({
-    codigo: String,
-    nombre: String
+    cod_pais: String,
+    nom_pais: String
 });
 
 module.exports = mongoose.model('pais', PaisSK);
